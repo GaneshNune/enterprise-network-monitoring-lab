@@ -39,7 +39,30 @@ This project is a hands-on enterprise network lab designed to demonstrate practi
 
 ## Project Status
 
-🚧 Project currently under development.
+## Initial Network Topology
+
+The initial lab consists of:
+
+- 1 Cisco 2911 router
+- 1 Cisco 2960 switch
+- 3 client PCs
+- 1 server
+
+### Network
+
+Network: 192.168.10.0/24
+
+Gateway: 192.168.10.1
+
+### Devices
+
+| Device | IP Address |
+|--------|------------|
+| EDGE-RTR| 192.168.10.1 |
+| CLIENT-01| 192.168.10.11 |
+| CLIENT-02| 192.168.10.12 |
+| CLIENT-03| 192.168.10.13 |
+| APP-SRV| 192.168.10.20 |
 
 ## Author
 
