@@ -409,3 +409,54 @@ Successfully configured and verified network interface monitoring and added netw
 
 ---
 
+## Day 12 — CPU Monitoring, Trigger Configuration and Alert Validation
+
+### Objective
+Configure CPU utilization triggers in Zabbix, simulate high CPU usage, and validate alert generation and recovery.
+
+### 1. CPU Monitoring
+- Host: Zabbix server
+- Monitoring item: CPU utilization
+- CPU monitoring verified through Latest data and Graph.
+
+### 2. Custom Trigger Configuration
+
+Created a custom trigger with the following settings:
+
+- Trigger name: High CPU utilization on Zabbix server
+- Severity: High
+- CPU threshold: 80%
+- Evaluation period: 5 minutes
+- Expression:
+
+`min(/Zabbix server/system.cpu.util,5m)>80`
+
+### 3. CPU Load Simulation
+
+Installed the Linux `stress` utility and generated CPU load using four CPU workers.
+
+Command:
+
+`stress --cpu 4 --timeout 600`
+
+Observed CPU utilization reaching approximately 99.99%.
+
+### 4. Alert Generation
+
+Verified that the custom Zabbix trigger changed from OK to PROBLEM.
+
+Also observed the built-in Linux monitoring trigger:
+
+- Linux: High CPU utilization (over 90% for 5m)
+
+Both alerts were successfully generated.
+
+### 5. Alert Recovery Validation
+
+After the CPU stress test ended, verified that both CPU alerts recovered.
+
+Confirmed that the alerts displayed a recovery time of 07:26:24 PM in the Zabbix Problems page.
+
+### Outcome
+
+Successfully configured and validated custom CPU monitoring, high CPU alert generation, and automatic problem recovery using Zabbix 7.0.32.
