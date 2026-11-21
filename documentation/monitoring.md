@@ -327,3 +327,85 @@ CPU and memory graphs have been verified, and the filesystem discovery configura
 - Keep monitoring setup and progress in this file.
 - Store network configuration and architecture material in their existing directories.
 - Use Git commits to preserve the project's development history.
+
+
+---
+
+## Day 11 — Network Interface Monitoring and Dashboard Configuration
+
+### Objective
+Configure and validate network interface monitoring using Zabbix and visualize network metrics through a monitoring dashboard.
+
+### Environment
+- Zabbix server: 7.0.32
+- Host: `Zabbix server`
+- Network interface: `ens33`
+- Monitoring agent: Zabbix Agent 2
+- Linux template: `Linux by Zabbix agent`
+
+### 1. Network Interface Discovery
+
+Verified the automatically discovered network interface `ens33`.
+
+Confirmed the following metrics were available:
+
+- Interface operational status
+- Interface type
+- Incoming traffic
+- Outgoing traffic
+- Packet errors and discards
+
+### 2. Network Traffic Monitoring
+
+Verified the following metrics under Latest data:
+
+- Interface ens33: Bits received
+- Interface ens33: Bits sent
+
+Observed incoming and outgoing traffic values updating successfully.
+
+### 3. Network Errors and Discards
+
+Verified the following four metrics:
+
+- Inbound packets discarded
+- Inbound packets with errors
+- Outbound packets discarded
+- Outbound packets with errors
+
+The observed values were zero during validation.
+
+### 4. Network Connectivity Validation
+
+Executed a connectivity test from the Ubuntu monitoring server to the VMware gateway.
+
+Command:
+
+`ping -c 20 192.168.196.2`
+
+Results:
+
+- Packets transmitted: 20
+- Packets received: 20
+- Packet loss: 0%
+- Average latency: 0.400 ms
+
+### 5. Zabbix Dashboard Configuration
+
+Created and configured a monitoring dashboard containing:
+
+- CPU utilization
+- Memory utilization
+- Server availability
+- System information
+- Network Traffic – ens33
+- Network Errors and Discards – ens33
+
+Verified that the dashboard displayed CPU, memory, and network monitoring graphs.
+
+### Outcome
+
+Successfully configured and verified network interface monitoring and added network traffic and error monitoring visualizations to the Zabbix dashboard.
+
+---
+

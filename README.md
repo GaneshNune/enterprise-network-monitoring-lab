@@ -39,6 +39,43 @@ This project is a hands-on enterprise network lab designed to demonstrate practi
 
 ## Project Status
 
+The project is being developed in multiple phases, covering network infrastructure, monitoring, troubleshooting, incident response and automation.
+
+### Completed Activities
+
+| Day | Activity | Status |
+|---|---|---|
+| Day 1 | Git and GitHub project setup | Completed |
+| Day 2 | Enterprise network topology using Packet Tracer | Completed |
+| Day 3 | IP addressing and network planning | Completed |
+| Day 4 | DHCP configuration | Completed |
+| Day 5 | DNS and HTTP configuration | Completed |
+| Day 6 | Network traffic analysis using Wireshark | Completed |
+| Day 7 | DNS resolution failure incident simulation | Completed |
+| Day 8 | Ubuntu monitoring server setup | Completed |
+| Day 9 | Zabbix installation and agent monitoring | Completed |
+| Day 10 | Zabbix monitoring and filesystem discovery | Completed |
+| Day 11 | Network interface monitoring and dashboard configuration | Completed |
+
+### Current Monitoring Capabilities
+
+- CPU utilization monitoring
+- Memory utilization monitoring
+- Server availability monitoring
+- Network interface discovery
+- Incoming and outgoing network traffic monitoring
+- Network packet errors and discards monitoring
+- Zabbix dashboard visualization
+
+### Monitoring Environment
+
+- Monitoring Platform: Zabbix 7.0.32
+- Operating System: Ubuntu Server 26.04.1 LTS
+- Monitoring Agent: Zabbix Agent 2
+- Network Interface: ens33
+- Virtualization: VMware
+
+
 ## Initial Network Topology
 
 The initial lab consists of:
